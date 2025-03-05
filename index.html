@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,56 +9,75 @@
     <!-- Open Sans font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
-<fieldset>
-    <legend> 1. gegvens van de overledenen</legend>
-    <p></p>
-    <p></p>
-    <p></p>
-<fieldset>
-    <legend>1b. Blabla </legend>
-    <label for=""><input type="radio" name="kinderen" value="n" id="">Nee. ga verder met vraag 1c</label>
-    <label for=""><input type="radio" name="kinderen" value="n" id="">Ja</label>
-</fieldset>
-</fieldset>
-
-
-<!-- <label for="">
-    burgerservenr
-    <input type="text" name="" id="">
-    <small>Heeft deze verkrijgerr geen bsn> lees dan <a href="#toelichting"></a></small>
-</label> -->
-
-
-
-<label for="">
-    Burgerservicenummer persoon
-    <input type="text" name="" id="">
-</label>
-
-
-
-<label for="text-bsn">Burgerservicenummer persoon</label>
-<input type="text" name="" id="text-bsn">
-
-
-<h2>text</h2>
-<input type="text">
-
-<h2>e-mail</h2>
-<input type="email">
-
-
-<h2>text</h2>
-<input type="text">
-
-
-
-
-
 <body>
-    
+    <nav>
+        <svg xmlns="http://www.w3.org/2000/svg" class="logo" width="51" height="20" viewBox="0 0 51 20">
+            <path
+                d="M22.358,9.6A5.543,5.543,0,0,0,18.448,8H7.62l4.01-4H21.757a1.612,1.612,0,0,1,1.1.5l5.915,5.9a5.543,5.543,0,0,0,3.91,1.6H43.513L39.5,16H29.376a1.612,1.612,0,0,1-1.1-.5Zm3.108,8.7a6.1,6.1,0,0,0,3.91,1.7h11.73L51.133,10,41.107,0H35.492l8.021,8H32.685a2.11,2.11,0,0,1-1.1-.4L25.667,1.7A6.1,6.1,0,0,0,21.757,0H10.026L0,10,10.026,20h5.615L7.62,12H18.448a2.109,2.109,0,0,1,1.1.4Z" />
+        </svg>
+        <div class="nav-icons">
+            <img src="assets/user--35x35.svg" alt="User">
+            <img src="assets/menu--35x35.svg" alt="Menu">
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h2>Aangifte Erfbelasting</h2>
+        </section>
+        <!-- Main fieldset -->
+        <fieldset>
+            <legend> 1 | Gegvens van de overledenen</legend>
+            <p>Vul hier de gegevens in van de overledene</p>
+            <!-- Fieldset 1a -->
+            <fieldset>
+                <legend>1a</legend>
+                <!-- Voornaam -->
+                <label for="vrnaam">Voornaam</label>
+                <input type="text" name="" id="vrnaam">
+                <!-- Tussenvoegsel -->
+                <label for="tsn-voegsel">Tussenvoegsel</label>
+                <input type="text" name="" id="tsn-voegsel">
+                <!-- Achternaam -->
+                <label for="achnaam">Achternaam</label>
+                <input type="text" name="" id="achnaam">
+                <!-- Overlijdensdatum -->
+                <label for="Overlijdensdatum">Overlijdensdatum</label>
+                <input type="date" name="" id="Overlijdensdatum">
+            </fieldset>
+            <!-- Fieldset 1b -->
+            <fieldset>
+                <legend>1b </legend>
+
+                <!-- Getrouwd? -->
+                <p>Was de overledene getrouwd of had de overledene een
+                    geregistreerd partner op het moment van overlijden? </p>
+                <!-- Gebruiker kan nu verder met vraag 1c -->
+                <label for=""><input type="radio" name="getrouwd" value="" id="">Nee</label>
+                <!-- Klap vervolg vragen uit -->
+                <label for=""><input type="radio" name="getrouwd" value="" id="">Ja</label>
+
+                <!-- Notariële akte? -->
+                <p>Hadden de overledene en diens echtgenoot of
+                    geregistreerd partner huwelijkse of partner schaps-
+                    voorwaarden laten vastleggen in een notariële akte?</p>
+                <label for=""><input type="radio" name="getrouwd" value="" id="">Nee</label>
+                <!-- Laat een melding poppen:  -->
+                <label for=""><input type="radio" name="getrouwd" value="" id="">Ja</label>
+
+
+
+            </fieldset>
+
+
+
+
+        </fieldset>
+
+    </main>
 </body>
+
 </html>
