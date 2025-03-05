@@ -1,0 +1,35 @@
+:root {
+    /* Fonts */
+    --font-primary: 'open sans';
+    --font-secondary: 'Inter', sans-serif;
+    
+    /* Fontgroottes in em */
+    --font-size-small: 1em; /* 16px */
+    --font-size-medium: 1.25em; /* 20px */
+    --font-size-large: 3.125em; /* 50px */
+    
+    /* Primary colors */
+    --color-yellow: #FFC917; /* Wit */
+    --color-blue: #003082; /* Donker */
+    --color-light-blue: #0063D3; /* Basis paars */
+    --color-white: #E7D4F8; /* Licht paars */
+
+     /* Shades of gray */ 
+     --grey-body-text: #070721;
+     --grey10: #202037;
+     --grey20: #39394D;
+     --grey30: #515164;
+     --grey40: #6A6A7A;
+     --grey50: #838390;
+     --grey60: #9C9CA6;
+     --grey70: #B5B5BC;
+     --grey80: #CDCDD3;
+     --grey-background: #E6E6E9;
+     --grey94: #F0F0F2;
+
+     /* error colors */
+     --color-red: #DB0029;
+     --color-green: #009A42;
+
+}
+
