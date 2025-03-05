@@ -1,5 +1,11 @@
 # readme BT - Lisa Mandemakers
 
+
+##  Formulieren workshop
+Gebruik firefox voor betere accessebility mogelijkheden
+* Gebruik ook geen verschillende naam inputs anders kun je een heel groot deel van de wereld afsluiten
+
+
 ### Fieldsets
 Je kunt met fieldsets en legends de formulieren groeperen en je kunt er mee valideren. Het zijn eigenlijk de "sections" van een formulier. 
 * disabled 
@@ -25,13 +31,14 @@ Met ID koppelen met for=""
 * Op een mobiel krijg je bijpassende toetsenborden
 * veel input kun je niet stylen want verschilt 
 * slider balkjes kun je wel helemaal stylen
+* Select = dropdown 
+    * 11a 
+    * er is een regel voor wnnr je meer dan 8 opties. Gebruik dan een drop-down
+
+
+### sele
 
 
 
 
-
-
-
-
-Gebruik firefox voor betere accessebility mogelijkheden
 
