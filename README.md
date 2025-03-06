@@ -1,4 +1,5 @@
 # readme BT - Lisa Mandemakers
+In deze README hou ik mijn progressie bij en en documenteer ik de informatie van de workshops die ik heb gevolgd tijdens de lessen.
 
 
 ##  Formulieren workshop
@@ -49,7 +50,6 @@ Met ID koppelen met for=""
 * je hebt een `<progress></progress>` en `<meter></meter>`
 
 
-
 ## Workshop CSS validatie
 
 ### Formulier Validatie
@@ -60,7 +60,7 @@ Met ID koppelen met for=""
 
 * `:valid` & `:invalid`  is een property in css waarmee je dingen kunt stylen die dat zijn
     * input, form of field kunnen allemaal invalid zijn wanneer er een required item is
-    * Je hebt ook de `:user-invalid`. Dit valideert het pas wanneer input daadwerkelijk is ingevuld. Let op werkt op input!!
+    * Je hebt ook de `:user-invalid`. Dit valideert het pas wanneer input daadwerkelijk is ingevuld. Let op: werkt op input!!
 
 * :has gebruik je om dingen te laten zien
 
@@ -68,7 +68,10 @@ Met ID koppelen met for=""
 * constraint validation
 * `<form novalidate>`
 * `input.setCustomValidity`
-*` input.reportValidity`
+* `input.reportValidity`
+* mdn client-side form validation > check site
+
+### Valideren in JS
 ```
 let input = document.querySelector('input')
 let input = document.querySelector('output')
@@ -78,18 +81,15 @@ output.value = input/checkvalidity() ? 'Valid' : 'Invalid'
 
 
 
-
-
-
-
-
 ## Random 
 
+  ```
   <fieldset>
-                <legend>1b. Blabla </legend>
-                <label for=""><input type="radio" name="kinderen" value="n" id="">Nee. ga verder met vraag 1c</label>
-                <label for=""><input type="radio" name="kinderen" value="n" id="">Ja</label>
-            </fieldset>
+    <legend>1b. Blabla </legend>
+    <label for=""><input type="radio" name="kinderen" value="n" id="">Nee. ga verder met vraag 1c</label>
+    <label for=""><input type="radio" name="kinderen" value="n" id="">Ja</label>
+ </fieldset>
+```
 
 
 
