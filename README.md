@@ -52,7 +52,7 @@ Met ID koppelen met for=""
 
 ## Workshop CSS validatie
 
-### formulierr
+### Formulier Validatie
 * `<form action="https:blabla.nl">` daar word de data van de form dan heen gestuurd
 
 * required bij het input field toevoegen geeft al meer validatie wnnr je een type hebt
@@ -61,6 +61,20 @@ Met ID koppelen met for=""
 * `:valid` & `:invalid`  is een property in css waarmee je dingen kunt stylen die dat zijn
     * input, form of field kunnen allemaal invalid zijn wanneer er een required item is
     * Je hebt ook de `:user-invalid`. Dit valideert het pas wanneer input daadwerkelijk is ingevuld. Let op werkt op input!!
+
+* :has gebruik je om dingen te laten zien
+
+## Validation IPA
+* constraint validation
+* `<form novalidate>`
+* `input.setCustomValidity`
+*` input.reportValidity`
+```
+let input = document.querySelector('input')
+let input = document.querySelector('output')
+output.value = input/checkvalidity() ? 'Valid' : 'Invalid'
+```
+
 
 
 
