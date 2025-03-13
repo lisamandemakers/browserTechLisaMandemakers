@@ -83,6 +83,12 @@ output.value = input/checkvalidity() ? 'Valid' : 'Invalid'
 
 ## Random 
 
+
+``` /* de p komt na het na komt toon je op deze manier  */
+label:has(input:user-invalid) + p {} ```
+
+
+
   ```
   <fieldset>
     <legend>1b. Blabla </legend>
