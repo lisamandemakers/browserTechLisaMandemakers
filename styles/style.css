@@ -78,6 +78,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    border-bottom: 10px solid var(--color-yellow);
 }
 
 nav svg {
@@ -100,13 +102,20 @@ nav svg:hover {
     cursor: pointer;
 }
 
+nav h1 {
+   font-size:1em;
+   color: var(--color-blue);
+   margin-top: 1.5em;
+}
+
 /* 
 //////////////////////////////////////////////////////////
 ---------------------✨✨✨ BANNER ✨✨✨---------------------
 /////////////////////////////////////////////////////// */
 
 section:first-of-type {
-    height: 200px;
+
+    height: 250px;
     width: 100vw;
     max-width: 100vw;
     background-color: #0063D3;
@@ -165,8 +174,10 @@ fieldset {
 }
 
 legend {
+    font-family: var(--font-primary);
     font-weight: bold;
     margin-bottom: 1rem;
+    color: var(--color-blue);
 }
 
 label {
@@ -215,6 +226,7 @@ button[type="submit"]:hover {
     border-radius: 12px;
     margin: 0 5%;
     margin-top: 4em;
+    max-width: 600px;
 }
 
 .fieldset-1a, .fieldset-1b-2, .fieldset-1c-2, .fieldset-1c-3, .fieldset-1d-2 {
@@ -225,7 +237,6 @@ button[type="submit"]:hover {
 
 .fieldset-1b-2 {
     display: none;
-    background-color: #009A42;
 }
 
 
@@ -265,7 +276,7 @@ body:has([value="ja-1d-a"]:checked) .fieldset-1d-2 {
 }
 
 .radio-btn-container label input {
-    width: 3vw;
+    width: 20px;
     aspect-ratio: 1;
     margin-right: 10px;
     background-color: var(--color-green);
@@ -304,10 +315,7 @@ input:required:user-valid {
     outline: none;
 }
 
-/* Correct ingevuld */
-input:valid {
-    border-color: green;
-}
+
 
 label:has(input:valid)::after {
     content: '✔️';
@@ -321,13 +329,6 @@ input:user-invalid {
     border-color: red;
 }
 
-label:has(input:user-invalid)::after {
-    content: '❌';
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: yellow;
-} 
 
 input {
     outline: none;
@@ -367,3 +368,23 @@ input {
 }
 
 
+.required::after {
+    color: var(--color-red);
+    content: '*';
+    position: absolute;
+    margin-left: 5px;
+}
+
+.school-opdracht {
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-yellow);
+
+}
+
+.school-opdracht h1 {
+    font-size: 1em;
+    color: var(--color-blue);
+}
