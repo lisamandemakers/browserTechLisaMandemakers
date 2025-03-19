@@ -57,7 +57,7 @@
                     <label>
                         <span>Burgerservicenummer
                             overledene</span>
-                        <input type="text" name="achternaam" required >
+                        <input class="bsn" type="text" name="achternaam" required pattern="\d{9}" title="Er mogen alleen 9 cijfers ingevoerd worden" >
                     </label>
 
                     <!-- Overlijdensdatum -->
@@ -147,7 +147,7 @@
                             <!-- Gebruiker kan nu verder met vraag 2 -->
                             <label><input type="radio" name="1d-a" value="nee-1d-a" id="">Nee</label>
                             <!-- Klap vervolg vragen uit -->
-                            <label><input type="radio" name="1d-a" value="ja-1d-a" id="">Ja</label>
+                            <label><input type="radio" name="1d-a" value="ja-1d-a" id="" checked>Ja</label>
                         </div>
                         <fieldset class="fieldset-1d-2">
                             <!-- Gegevens notaris -->
