@@ -32,8 +32,12 @@
         <section>
             <h1>Aangifte Erfbelasting</h1>
         </section>
+        <div class="carousel-navigation">
+            <button type="button" class="carousel-prev">Vorige Stap</button>
+            <button type="button" class="carousel-next">Volgende Stap</button>
+        </div>
 
-        <form action="" method="post">
+        <form action="">
             <fieldset class="main-fieldset" id="acquirer-1">
                 <legend>1 | Gegevens van de overledene</legend>
                 <p>Vul hier de gegevens in van de overledene</p>
@@ -68,14 +72,14 @@
 
                     <label>
                         <span class="required">Overlijdensdatum</span>
-                        <input type="date" name="overlijdensdatum" required>
+                        <input class="start_date" type="date" name="overlijdensdatum" required>
                     </label>
                 </fieldset>
 
                 <!-- Fieldset 1b -->
                 <fieldset>
                     <legend>1b</legend>
-                    <p>Was de overledene getrouwd of had een geregistreerd partner?</p>
+                    <span class="required">Was de overledene getrouwd of had een geregistreerd partner?</span>
                     <div class="radio-btn-container">
                         <label><input type="radio" name="gehuwd" value="nee-1b-a" required>Nee</label>
                         <label><input type="radio" name="gehuwd" value="ja-1b-a">Ja</label>
@@ -96,7 +100,7 @@
 
                         <label>
                             Datum huwelijkse voorwaarden
-                            <input type="date" name="datum-huwelijk">
+                            <input class="start_date" type="date" name="datum-huwelijk">
                         </label>
                     </fieldset>
 
@@ -104,7 +108,7 @@
                     <fieldset>
                         <legend>1c</legend>
 
-                        <p>Had de overledene kinderen?</p>
+                        <span class="required"> Had de overledene kinderen?</span>
                         <div class="radio-btn-container">
                             <label><input type="radio" name="kinderen" value="nee-1c-a">Nee</label>
                             <label><input type="radio" name="kinderen" value="ja-1c-a">Ja</label>
@@ -131,49 +135,143 @@
                     <fieldset>
                         <legend>1d</legend>
 
-                        <p>Had de overledene een testament?</p>
+                        <span class="required">Had de overledene een testament?</span>
                         <div class="radio-btn-container">
                             <label><input type="radio" name="testament" value="nee-1d-a">Nee</label>
                             <label><input type="radio" name="testament" value="ja-1d-a">Ja</label>
                         </div>
-
                         <fieldset class="fieldset-1d-2">
                             <label>
-                                Protocolnummer notaris
-                                <input type="text" name="protocolnummer">
+                                <span class="required">Protocolnummer notaris</span> 
+                                <input type="text" name="protocolnummer" pattern="^\d+$" title="Alleen cijfers toegestaan" required>
                             </label>
-
                             <label>
-                                Voorletter(s)
-                                <input type="text" name="voorletter-1d" pattern="^[A-Z](\.[A-Z])*"
-                                    title="Alleen hoofdletters met punt (zoals A.R.W)">
+                                <span class="required">Voorletter(s)</span> 
+                                <input type="text" name="voorletter-1d" pattern="^[A-Z](\.[A-Z])*" 
+                                    title="Alleen hoofdletters met punt (zoals A.R.W)" required>
                             </label>
-
+                        
                             <label>
                                 Tussenvoegsel
                                 <input type="text" name="tussenvoegsel-1d">
                             </label>
-
+                        
                             <label>
-                                Achternaam
-                                <input type="text" name="achternaam-1d">
+                                <span class="required">Achternaam</span> 
+                                <input type="text" name="achternaam-1d" required>
                             </label>
-
+                        
                             <label>
-                                Vestigingsplaats
-                                <input type="text" name="vestigingsplaats">
+                                <span class="required">Vestigingsplaats</span> 
+                                <input type="text" name="vestigingsplaats" required>
                             </label>
-
+                        
                             <label>
-                                Datum van het testament of wijziging
-                                <input type="date" name="testament-datum">
+                              <span class="required">Datum van het testament of wijziging</span>    
+                                <input class="start_date" type="date" name="testament-datum" required>
                             </label>
                         </fieldset>
+                        
                     </fieldset>
                 </fieldset>
-                <button type="submit">Verstuur</button>
             </fieldset>
+           
+
+            <fieldset class="main-fieldset" id="verhouding-2">
+                <legend>4 | Gegevens verkrijgers (vervolg)</legend>
+            
+                <fieldset class="fieldset-4d">
+               
+                        <span class="required"> Wat is het erfdeel van deze verkrijger? </span>
+                        <div class="radio-btn-container">
+                            <label><input type="radio" name="erfdeel" value="breuk"> Breuk (bijv. 1/4)</label>
+                            <label><input type="radio" name="erfdeel" value="percentage"> Percentage</label>
+                        </div>
+                   
+                    
+                    <div class="input-container breuk">
+                        <label for="breuk"> <span class="required">Vul een breuk in (bijv. 1/4):</span></label>
+                        <input type="number" id="breuk" name="breuk" required>
+                    </div>
+                    
+                    <div class="input-container percentage">
+                        <label for="percentage"> <span class="required">Vul een percentage in (bijv. 25%):</span></label>
+                        <input type="number" id="percentage" name="percentage" required>
+                    </div>
+                    
+                        <span class="required"> Doet deze verkrijger een beroep op diens legitieme portie?   </label> </span>
+    
+                        <div class="radio-btn-container">
+                            <label><input type="radio" name="vruchtgebruik" value="ja"> Ja</label>
+                            <label><input type="radio" name="vruchtgebruik" value="nee"> Nee</label>
+                        </div>
+            
+                
+                            <span class="required"> Is er sprake van vruchtgebruik? </span>
+                            <div class="radio-btn-container">
+                                <label><input type="radio" name="vruchtgebruik" value="ja-4d-1a"> Ja</label>
+                                <label><input type="radio" name="vruchtgebruik" value="nee"> Nee</label>
+                            </div>
+                
+
+                        <fieldset class="fieldset-4d-1a">
+                  
+                           <p> Vraagt de partner van de overledene of iemand anders die het vruchtgebruik van de woning krijgt om uitstel van betaling?</p>
+                            <div class="radio-btn-container">
+                                <label><input type="radio" name="uitstel-betaling" value="ja"> Ja</label>
+                                <label><input type="radio" name="uitstel-betaling" value="nee"> Nee</label>
+                            </div>
+                
+   
+                   
+      
+                        <label>
+                            Waarde van het vruchtgebruik (gebruik Tabel C om deze waarde te berekenen):
+                            <input type="number" name="waarde-fruchtgebruik" placeholder="Waarde in €">
+                        </label>
+                    </fieldset>
+                
+            
+        
+                       
+                            <span class="required">  Heeft deze verkrijger een partner die ook een erfdeel of een legaat van de overledene krijgt? </span>
+                            <div class="radio-btn-container">
+                                <label><input type="radio" name="partner-erfdeel" value="ja-4d-1b" required> Ja</label>
+                                <label><input type="radio" name="partner-erfdeel" value="nee" required> Nee</label>
+                  </div>
+                        </label>
+            
+                        <fieldset class="fieldset-4d-1b">
+            
+                        <label>
+                            Naam van partner 
+                            <input type="text" name="naam-partner" required>
+                        </label>
+                    
+                      
+                 
+                        <label>
+                            Burgerservicenummer partner (indien van toepassing):
+                            <input type="text" name="bsn-partner" pattern="\d{9}" title="BSN van de partner (9 cijfers)" required>
+                        </label>
+
+                    </fieldset>
+            
+            
+    
+                
+               
+                <button type="submit">Verstuur</button>
+              
+            </fieldset>
+        </fieldset>
+          
+
+          
+
         </form>
+
+
     </main>
 
     <script src="scripts/script.js"></script>

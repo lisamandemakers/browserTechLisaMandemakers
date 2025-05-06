@@ -56,14 +56,21 @@ h1,
 h2,
 h3,
 p,
-label {
+label,
+span {
     font-family: var(--font-primary);
 }
 
 p,
-label {
+label,
+span {
     font-weight: 350;
     font-size: 0.9em;
+}
+
+html {
+    height: fit-content;
+
 }
 
 /* 
@@ -170,7 +177,8 @@ h1 {
 
 fieldset {
     border: none;
-    margin-bottom: 2rem;
+    padding: 0;
+    padding-right: 1.7em;
 }
 
 legend {
@@ -178,6 +186,7 @@ legend {
     font-weight: bold;
     margin-bottom: 1rem;
     color: var(--color-blue);
+    transition: 1s ease-in;
 }
 
 label {
@@ -186,6 +195,7 @@ label {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="date"] {
     width: 100%;
     padding: 0.75rem;
@@ -233,40 +243,65 @@ button[type="submit"]:hover {
 .fieldset-1b-2,
 .fieldset-1c-2,
 .fieldset-1c-3,
-.fieldset-1d-2 {
+.fieldset-1d-2,
+.fieldset-4d-1a,
+.fieldset-4d-1b {
     margin-top: 1rem;
     display: block; /* fallback voor browsers zonder :has */
+    transition: 0.4s ease-in;
+    opacity: 1;
+    max-height: 1000px;
 }
 
 /* ✅ Alleen tonen als de juiste ja-optie is geselecteerd */
 body:not(:has(input[value="ja-1b-a"]:checked)) .fieldset-1b-2 {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
 }
 
 body:not(:has(input[value="ja-1c-a"]:checked)) .fieldset-1c-2 {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
 }
 
 body:not(:has(input[value="ja-1c-b"]:checked)) .fieldset-1c-3 {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
 }
 
 body:not(:has(input[value="ja-1d-a"]:checked)) .fieldset-1d-2 {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+
+body:not(:has(input[value="ja-4d-1a"]:checked)) .fieldset-4d-1a {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+
+body:not(:has(input[value="ja-4d-1b"]:checked)) .fieldset-4d-1b {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
 }
 
 
 /* De rest van je CSS blijft hetzelfde */
 .radio-btn-container {
-    /* background-color: #009A42; */
     display: flex;
     gap: 5vw;
     margin-top: 3vw;
     margin-bottom: 3vw;
+
 }
 
 .radio-btn-container label input {
-    width: 20px;
+    width: 1.5em;
     aspect-ratio: 1;
     margin-right: 10px;
     background-color: var(--color-green);
@@ -275,17 +310,17 @@ body:not(:has(input[value="ja-1d-a"]:checked)) .fieldset-1d-2 {
 
 /* Specifieke stijl als het veld leeg is en niet valid */
 input:required:user-invalid {
-    border-color: #e63946;
+    border: 2px solid var(--color-red);
 }
 
 /* Specifieke stijl als het veld correct is ingevuld */
 input:required:user-valid {
-    border-color: #4caf50;
+    border: 2px solid var(--color-green);
 }
 
 /* Fout ingevuld */
 input:user-invalid {
-    border-color: red;
+    border: 2px solid var(--color-red);
 }
 
 input {
@@ -294,31 +329,14 @@ input {
     /* Set a default border if you want */
 }
 
-/* bsn invalid */
-.bsn {
-    position: relative;
+input:focus:invalid {
+    border: 2px solid var(--color-red);
 }
 
-.bsn:focus:invalid {
-    border: 2px solid #9a0000;
-}
-
-.bsn:valid {
+input:valid {
     border: 2px solid var(--color-green);
 }
 
-label:has(.bsn:focus)::after {
-    content: "BSN moet 9 cijfers bevatten";
-    padding: 3px;
-    width: 400px;
-    border-radius: 5px;
-    border-left: 4px solid var(--color-red);
-    align-self: flex-start;
-    width: fit-content;
-    background-color: #f8c7c5;
-    position: absolute;
-    transform: translateY(10px);
-}
 
 .required::after {
     color: var(--color-red);
@@ -330,6 +348,8 @@ label:has(.bsn:focus)::after {
 
 /* Styling voor de foutmelding */
 .error-message {
+    color: rgb(23, 23, 23);
+    font-size: 1em;
     padding: 3px;
     width: 400px;
     border-radius: 5px;
@@ -337,17 +357,81 @@ label:has(.bsn:focus)::after {
     align-self: flex-start;
     width: fit-content;
     background-color: #f8c7c5;
-    position: absolute;
+    padding-left: 0 0.5em;
     transform: translateY(10px);
 }
 
-/* Styling voor de input wanneer er een fout is */
-.input-error {
-    border-color: red;
-    border: 2px solid red;
-}
+
 
 /* Styling voor de input wanneer er geen fout is */
 .input-valid {
     border-color: #4CAF50;
+}
+
+
+.main-fieldset {
+    display: none;
+}
+
+/* Stijl voor navigatieknoppen */
+.carousel-navigation {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    top: 70px;  /* Zet de afstand vanaf de bovenkant van het scherm */
+    background-color: white;  /* Optioneel: om te zorgen dat de achtergrond wit blijft */
+    z-index: 100;  /* Optioneel: zorgt ervoor dat de knoppen boven andere elementen blijven */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid #ccc;  /* Optioneel: een rand om het visueel te onderscheiden */
+}
+.carousel-prev {
+    display: none;
+}
+.carousel-navigation button {
+    background-color: var(--color-blue);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.carousel-navigation button:hover {
+    background-color: var(--color-light-blue);
+    scale: 1.1;
+}
+
+/* Standaard verbergen van de invoervelden */
+.input-container {
+    display: none;
+}
+
+
+
+.breuk,
+.percentage {
+   display: block;/* fallback voor browsers zonder :has */
+    transition: 0.4s ease-in;
+    opacity: 1;
+    max-height: 1000px;
+    margin-bottom: 1em;
+}
+
+/* Alleen tonen als de juiste radio-knop is geselecteerd */
+body:not(:has(input[value="breuk"]:checked)) .input-container.breuk {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+
+/* Alleen tonen als de juiste radio-knop is geselecteerd */
+body:not(:has(input[value="percentage"]:checked)) .input-container.percentage {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
 }
