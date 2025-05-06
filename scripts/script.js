@@ -1,5 +1,5 @@
 // ✨✨ LOCAL STORAGE ✨✨
-// Function to save form data to localStorage
+// Functie om de localStorage op te slaan
 function saveFormData() {
     const inputs = document.querySelectorAll('#acquirer-1 input');
     const formData = {};
@@ -173,7 +173,7 @@ function showError(input) {
     }
 }
 
-// Data niet verder dan vandaag
+// Datum validatie
 const today = new Date().toISOString().split("T")[0];
 
 document.querySelectorAll(".start_date").forEach(input => {
@@ -181,13 +181,16 @@ document.querySelectorAll(".start_date").forEach(input => {
 });
 
 
+// ✨✨ CAROUSEL SLIDER ✨✨
 const prevButton = document.querySelector('.carousel-prev');
 const nextButton = document.querySelector('.carousel-next');
-const fieldsets = document.querySelectorAll('.main-fieldset');  // Kies alle main-fieldsets
+const fieldsets = document.querySelectorAll('.main-fieldset');
 let currentIndex = 0;
 
-// Zorg ervoor dat de eerste fieldset zichtbaar is bij de start
-fieldsets[currentIndex].style.display = "block";
+// Laat alleen de eerste fieldset zien, verberg de rest via JS (pas nu!)
+fieldsets.forEach((fieldset, index) => {
+    fieldset.style.display = index === currentIndex ? "block" : "none";
+});
 
 // Verberg de overige fieldsets
 fieldsets.forEach((fieldset, index) => {
@@ -220,6 +223,8 @@ prevButton.addEventListener('click', () => {
     
 });
 
+
+// ✨✨ POP UP ✨✨
 document.addEventListener('DOMContentLoaded', () => {
     const trigger = document.getElementById('popupTrigger');
     const popup = document.getElementById('popupText');

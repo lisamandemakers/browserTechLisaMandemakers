@@ -48,6 +48,12 @@
     }
 }
 
+/* 
+//////////////////////////////////////////////////////////
+---------------------✨✨✨ GLOBAL ✨✨✨---------------------
+/////////////////////////////////////////////////////// 
+*/
+
 * {
     margin: 0;
 }
@@ -175,6 +181,12 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+/* 
+//////////////////////////////////////////////////////////
+-------------------✨✨✨ FORM ELEMENTEN ✨✨✨-------------------
+/////////////////////////////////////////////////////// 
+*/
+
 fieldset {
     border: none;
     padding: 0;
@@ -238,6 +250,12 @@ button[type="submit"]:hover {
     margin-top: 4em;
     max-width: 600px;
 }
+
+/* 
+//////////////////////////////////////////////////////////
+----------------✨✨✨ CONDITIONELE VELDEN ✨✨✨---------------
+/////////////////////////////////////////////////////// 
+*/
 
 .fieldset-1a,
 .fieldset-1b-2,
@@ -308,6 +326,13 @@ body:not(:has(input[value="ja-4d-1b"]:checked)) .fieldset-4d-1b {
     accent-color: var(--color-blue);
 }
 
+/* 
+//////////////////////////////////////////////////////////
+--------------------✨✨✨ VALIDATIE ✨✨✨---------------------
+/////////////////////////////////////////////////////// 
+*/
+
+
 /* Specifieke stijl als het veld leeg is en niet valid */
 input:required:user-invalid {
     border: 2px solid var(--color-red);
@@ -333,10 +358,6 @@ input:focus:invalid {
     border: 2px solid var(--color-red);
 }
 
-input:valid {
-    border: 2px solid var(--color-green);
-}
-
 
 .required::after {
     color: var(--color-red);
@@ -344,7 +365,6 @@ input:valid {
     position: absolute;
     margin-left: 5px;
 }
-
 
 /* Styling voor de foutmelding */
 .error-message {
@@ -369,8 +389,16 @@ input:valid {
 }
 
 
+
+/* 
+//////////////////////////////////////////////////////////
+------------------✨✨✨ CAROUSEL STYLING ✨✨✨------------------
+/////////////////////////////////////////////////////// 
+*/
+
 .main-fieldset {
-    display: none;
+    display: block;
+    margin-bottom: 10em;
 }
 
 /* Stijl voor navigatieknoppen */
@@ -436,6 +464,12 @@ body:not(:has(input[value="percentage"]:checked)) .input-container.percentage {
     max-height: 0;
 }
 
+
+/* 
+//////////////////////////////////////////////////////////
+------------------✨✨✨ MODAL / POP-UP ✨✨✨-------------------
+/////////////////////////////////////////////////////// 
+*/
 
 .pop-up {
     color: var(--color-white);
