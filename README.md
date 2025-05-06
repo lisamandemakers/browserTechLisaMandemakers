@@ -1,6 +1,8 @@
 # readme BT - Lisa Mandemakers
-In deze README hou ik mijn progressie bij en en documenteer ik de informatie van de workshops die ik heb gevolgd tijdens de lessen.
 
+![Afbeelding](/assets/eindresultaat.png)
+
+In deze README hou ik mijn progressie bij en en documenteer ik de informatie van de workshops die ik heb gevolgd tijdens de lessen.
 
 ##  Formulieren workshop
 Gebruik firefox voor betere accessebility mogelijkheden
