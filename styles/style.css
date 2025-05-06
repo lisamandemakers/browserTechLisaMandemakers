@@ -133,7 +133,7 @@ section:first-of-type {
     max-width: 100vw;
     background-color: #0063D3;
     background-image: linear-gradient(45deg, rgba(0, 48, 130, 0.9) 30%, rgba(246, 246, 255, 0)),
-        url('/assets/backgroundimg.jpg');
+        url('../assets/backgroundimg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
