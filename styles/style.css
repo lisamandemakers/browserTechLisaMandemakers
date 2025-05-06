@@ -18,7 +18,7 @@
     /* Donker */
     --color-light-blue: #0063D3;
     /* Basis paars */
-    --color-white: #E7D4F8;
+    --color-white: #fff;
     /* Licht paars */
 
     /* Shades of gray */
@@ -435,3 +435,67 @@ body:not(:has(input[value="percentage"]:checked)) .input-container.percentage {
     opacity: 0;
     max-height: 0;
 }
+
+
+.pop-up {
+    color: var(--color-white);
+
+    cursor: pointer;
+    background-color: var(--color-blue);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: 0.2s ease-in;
+    margin-left: 1em;
+    display: inline-block;
+  }
+
+  .pop-up:hover {
+    background-color: var(--color-light-blue);
+    scale: 1.1;
+
+  }
+  
+/* Donkere overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+  }
+  
+  /* Modal pop-up */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: var(--font-primary);
+  }
+  
+  /* Verbergen */
+  .hidden {
+    display: none;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .close-button:hover {
+    color: #000;
+  }
+  

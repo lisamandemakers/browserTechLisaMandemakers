@@ -219,3 +219,37 @@ prevButton.addEventListener('click', () => {
     }
     
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.getElementById('popupTrigger');
+    const popup = document.getElementById('popupText');
+    const overlay = document.getElementById('overlay');
+    const closeButton = document.getElementById('closeModal');
+
+closeButton.addEventListener('click', () => {
+  popup.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+
+  
+    // Open popup
+    trigger.addEventListener('click', () => {
+      popup.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+    });
+  
+    // Sluit popup bij klikken buiten de modal
+    overlay.addEventListener('click', () => {
+      popup.classList.add('hidden');
+      overlay.classList.add('hidden');
+    });
+  
+    // Optioneel: sluiten met Escape-toets
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        popup.classList.add('hidden');
+        overlay.classList.add('hidden');
+      }
+    });
+  });
+  

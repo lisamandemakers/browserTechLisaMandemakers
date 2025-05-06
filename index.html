@@ -33,8 +33,8 @@
             <h1>Aangifte Erfbelasting</h1>
         </section>
         <div class="carousel-navigation">
-            <button type="button" class="carousel-prev">Vorige Stap</button>
-            <button type="button" class="carousel-next">Volgende Stap</button>
+            <button type="button" class="carousel-prev"> ← Vorige Stap</button>
+            <button type="button" class="carousel-next">Volgende Stap → </button>
         </div>
 
         <form action="">
@@ -199,8 +199,17 @@
                         <input type="number" id="percentage" name="percentage" required>
                     </div>
                     
-                        <span class="required"> Doet deze verkrijger een beroep op diens legitieme portie?   </label> </span>
-    
+                        <span class="required"> Doet deze verkrijger een beroep op diens legitieme portie? <span class="pop-up" id="popupTrigger"> Lees hier toelichting</span> </label> </span>
+                        <div id="overlay" class="overlay hidden"></div>
+
+                       
+  <div id="popupText" class="modal hidden">
+    <span id="closeModal" class="close-button">&times;</span>
+    <p>
+      De legitieme portie is het wettelijk erfdeel waar bepaalde erfgenamen altijd recht op hebben.
+      Als iemand daar een beroep op doet, heeft dat invloed op de verdeling van de erfenis.
+    </p>
+  </div>
                         <div class="radio-btn-container">
                             <label><input type="radio" name="vruchtgebruik" value="ja"> Ja</label>
                             <label><input type="radio" name="vruchtgebruik" value="nee"> Nee</label>
@@ -226,8 +235,8 @@
                    
       
                         <label>
-                            Waarde van het vruchtgebruik (gebruik Tabel C om deze waarde te berekenen):
-                            <input type="number" name="waarde-fruchtgebruik" placeholder="Waarde in €">
+                            Waarde van het vruchtgebruik:
+                            <input type="number" name="waarde-fruchtgebruik" placeholder="Waarde in €" required>
                         </label>
                     </fieldset>
                 
