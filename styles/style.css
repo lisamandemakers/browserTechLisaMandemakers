@@ -326,3 +326,28 @@ label:has(.bsn:focus)::after {
     position: absolute;
     margin-left: 5px;
 }
+
+
+/* Styling voor de foutmelding */
+.error-message {
+    padding: 3px;
+    width: 400px;
+    border-radius: 5px;
+    border-left: 4px solid var(--color-red);
+    align-self: flex-start;
+    width: fit-content;
+    background-color: #f8c7c5;
+    position: absolute;
+    transform: translateY(10px);
+}
+
+/* Styling voor de input wanneer er een fout is */
+.input-error {
+    border-color: red;
+    border: 2px solid red;
+}
+
+/* Styling voor de input wanneer er geen fout is */
+.input-valid {
+    border-color: #4CAF50;
+}
